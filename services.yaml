@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-app-service
+spec:
+  selector:
+    app: hello-app
+  ports:
+    - protocol: TCP
+      # A porta que o serviço expõe no cluster
+      port: 8080
+      # A porta que a aplicação está ouvindo dentro do container
+      targetPort: 8000

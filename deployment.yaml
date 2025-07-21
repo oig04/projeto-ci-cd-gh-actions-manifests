@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-app
+  template:
+    metadata:
+      labels:
+        app: hello-app
+    spec:
+      containers:
+      - name: hello-app
+        # ATENÇÃO: Substitua pelo seu usuário do Docker Hub e o nome da imagem.
+        # A tag será atualizada pelo GitHub Actions, pode deixar como 'latest' por enquanto.
+        image: oig04/hello-app:latest
+        ports:
+        - containerPort: 8000

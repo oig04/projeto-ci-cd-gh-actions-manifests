@@ -16,6 +16,6 @@ spec:
       - name: hello-app
         # ATENÇÃO: Substitua pelo seu usuário do Docker Hub e o nome da imagem.
         # A tag será atualizada pelo GitHub Actions, pode deixar como 'latest' por enquanto.
-        image: oig04/hello-app:latest
+        image: oig04/hello-app:00c34e0535b53acae78f577f678bbd5f890e9f2e
         ports:
         - containerPort: 8000
